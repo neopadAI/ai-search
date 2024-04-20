@@ -12,14 +12,15 @@ if os.path.exists(books_path) and os.path.isdir(books_path):
     
     if books_folders:
         for folder in books_folders:
-            print(folder)
+            #print(folder)
+            pass
     else:
         print("No results found")
 else:
     print("No results found")
 
 # Ask the user to input folder names (separated by commas)
-folders_to_open = input("ai-search: ").split()
+folders_to_open = input("ai-search: ").lower().split()
 
 # Dictionary to keep track of the content of already printed files
 printed_file_content = {}
@@ -27,7 +28,7 @@ printed_file_content = {}
 # Iterate through the entered folder names
 for folder_name in folders_to_open:
     folder_name = folder_name.strip()  # Remove extra white spaces
-    if folder_name.lower() not in no.search:
+    if folder_name not in no.search:
         # Find the most similar folders
         matches = difflib.get_close_matches(folder_name, books_folders, n=len(books_folders), cutoff=0.5)
 
