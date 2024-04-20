@@ -64,5 +64,5 @@ def run():
                     else:
                         print('Page not found')
             else:
-                if 'https://www' or 'https://www' in folder_name:
+                if 'https://www.' in folder_name:
                     impare.save_website_text(folder_name)
