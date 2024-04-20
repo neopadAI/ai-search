@@ -1,4 +1,4 @@
-import ai_search._2_0.main as ai
+import ai_search.main as ai
 
 ai.req = input('ai-search: ')
 ai.run()
