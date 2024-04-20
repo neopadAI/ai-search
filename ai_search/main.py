@@ -1,7 +1,6 @@
 import os
 import difflib
 import no_search.main as no
-import ai_search.impare as impare
 
 result = []
 req = ''
@@ -66,3 +65,5 @@ def run():
             else:
                 if 'https://www.' in folder_name:
                     impare.save_website_text(folder_name)
+                else:
+                    pass
