@@ -1,20 +1,20 @@
-import ai_search._2_0.main as ai
-import ai_search._2_0.impare as ht
+import ai_search.main as ai
+import ai_search.learn as ht
 import os
 
-def crea_file(nome_file, content):
-    # Creare il percorso della cartella "books" all'interno di un'altra cartella
-    percorso_cartella = os.path.join("books")
+def create_file(file_name, content):
+    # Create the path for the "books" folder inside another folder
+    folder_path = os.path.join("books")
     
-    # Assicurati che la cartella esista, altrimenti creala
-    if not os.path.exists(percorso_cartella):
-        os.makedirs(percorso_cartella)
+    # Ensure the folder exists, otherwise create it
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
     
-    # Crea il percorso completo del nuovo file
-    percorso_file = os.path.join(percorso_cartella, f"{nome_file}.txt")
+    # Create the complete path for the new file
+    file_path = os.path.join(folder_path, f"{file_name}.txt")
     
-    # Crea il file nella cartella specificata
-    with open(percorso_file, 'w') as file:
+    # Create the file in the specified folder
+    with open(file_path, 'w') as file:
         file.write(content)
 
 code = []
@@ -48,7 +48,7 @@ while(True):
     elif(value == name + '.create()'):
         value_name = input('.name = ')
         value_content = input('.content = ')
-        crea_file(value_name, value_content)
+        create_file(value_name, value_content)
     else:
         if value == '':
             pass
