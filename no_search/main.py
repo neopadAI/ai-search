@@ -9,7 +9,7 @@ search = [
     "in",
     "that",
     "have",
-    "I",
+    "i",
     "it",
     "for",
     "not",
