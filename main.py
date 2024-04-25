@@ -1,3 +1,7 @@
+# to-train
+import to_train.main
+
+# request
 import ai_search.main as ai
 
 ai.req = input('ai-search: ')
