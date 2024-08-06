@@ -67,3 +67,13 @@ def run():
                     impare.save_website_text(folder_name)
                 else:
                     pass
+
+                if 'http://www.' in folder_name:
+                    impare.save_website_text(folder_name)
+                else:
+                    pass
+
+                if 'website' in folder_name:
+                    impare.save_website_text('http://www.' + folder_name)
+                else:
+                    pass
