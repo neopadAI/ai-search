@@ -1,4 +1,5 @@
 import os
+import impare as impare
 import difflib
 import no_search.main as no
 
