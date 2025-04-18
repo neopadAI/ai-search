@@ -40,8 +40,10 @@ while(True):
         ai.req = input('= ')
         ai.run()
         results = ai.result
+        print("{")
         for result in results:
-            print('= ' + result)
+            print('   ' + result)
+        print("}")
     elif(value == name + '.search(web)'):
         value = input('= ')
         ht.save_website_text(value)
