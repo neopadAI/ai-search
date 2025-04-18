@@ -46,20 +46,3 @@ def save_text_to_file(file_path, text):
     with open(file_path, "w") as file:
         file.write(text)
 
-# Setting up the main folder
-main_folder = "books"
-
-# Ask the user to provide the category name
-category_name = input("Category: ")
-
-# Create the folder with the category name, if it does not exist already
-category_folder_path = create_folder_if_not_exists(main_folder, category_name)
-
-# Ask the user to input the text to save into the HTML file
-text = input("Content: ")
-
-# Generate a unique name for the HTML file within the category folder
-html_file_path = unique_file_name(category_folder_path)
-
-# Save the text into the HTML file
-save_text_to_file(html_file_path, text)
