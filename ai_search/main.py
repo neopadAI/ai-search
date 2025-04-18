@@ -1,5 +1,5 @@
 import os
-import impare as impare
+import ai_search.learn as learn
 import difflib
 import no_search.main as no
 
@@ -65,16 +65,16 @@ def run():
                         print('Page not found')
             else:
                 if 'https://www.' in folder_name:
-                    impare.save_website_text(folder_name)
+                    learn.save_website_text(folder_name)
                 else:
                     pass
 
                 if 'http://www.' in folder_name:
-                    impare.save_website_text(folder_name)
+                    learn.save_website_text(folder_name)
                 else:
                     pass
 
                 if 'website' in folder_name:
-                    impare.save_website_text('http://www.' + folder_name)
+                    learn.save_website_text('http://www.' + folder_name)
                 else:
                     pass
