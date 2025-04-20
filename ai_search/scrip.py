@@ -77,8 +77,3 @@ def move_folders_to_books_folder(root_folder):
             if d != "books":
                 os.rename(os.path.join(root, d), os.path.join(books_folder, d))
     print("All folders moved to 'books' folder.")
-
-# Example usage
-url = "https://www.neopad.it"
-download_website(url)
-move_folders_to_books_folder(urlparse(url).netloc)
