@@ -16,22 +16,17 @@ def download_file(url, folder):
 
 def download_website(url, folder="books/"):
     print('preparation...')
-    # Performs the HTTP request to get the page content
     response = requests.get(url)
     if response.status_code == 200:
         # Parses the HTML content
         soup = BeautifulSoup(response.content, 'html.parser')
-        # Extracts the domain name to create the folder
         domain = urlparse(url).netloc
-        # Extracts the page path to create the folder
         path = urlparse(url).path
         # Creates a folder for the website
         site_folder = os.path.join(folder, domain, *path.split("/"))
         os.makedirs(site_folder, exist_ok=True)
-        # Creates an HTML file to save the HTML code
         with open(os.path.join(site_folder, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(response.text)
-        # Downloads linked files in the HTML code
         for tag in soup.find_all(['script', 'link', 'style']):
             if tag.has_attr('src'):
                 src = tag['src']
