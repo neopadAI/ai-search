@@ -739,10 +739,3 @@ search = [
     "Zac", "Zach", "Zacharia", "Zachariah", "Zacharias", "Zacharie", "Zachary", "Zacherie", "Zack", "Zackary",
     "Zane", "Zared", "Zeb", "Zebadiah", "Zebulon", "Zed", "Zeke", "Zeph", "Zephyr", "Zeus", "Zollie", "Zolly"
 ]
-
-def count():
-  x = 0
-  for i in search:
-    x += 1
-
-  return x
