@@ -3,17 +3,14 @@ import ai_search.learn as ht
 import os
 
 def create_file(file_name, content):
-    # Create the path for the "books" folder inside another folder
     folder_path = os.path.join("books")
     
     # Ensure the folder exists, otherwise create it
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
     
-    # Create the complete path for the new file
     file_path = os.path.join(folder_path, f"{file_name}.txt")
     
-    # Create the file in the specified folder
     with open(file_path, 'w') as file:
         file.write(content)
 
